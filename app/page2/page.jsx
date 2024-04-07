@@ -44,22 +44,22 @@ export default function Component() {
       </div>
       <div className="px-6 py-4">
         <h2 className="text-lg font-semibold mb-4">
-          Question to know more about the users?
+        What steps will you take to maintain your professional demeanor in stressful situations?
         </h2>
         <div className="space-y-2">
           <Button
             className={`w-full py-3 bg-white text-black border border-gray-300 hover:bg-slate-400 ${selectedOptions[0] ? active : inactive}`} onClick={() => handleClick(0)}
           >
-            Some answer
+            Problem-solve calmly through challenges
           </Button>
           <Button className={`w-full py-3 bg-white text-black border border-gray-300 hover:bg-gradient ${selectedOptions[1] ? active : inactive}`} onClick={() => handleClick(1)}>
-            Some answer
+          Professional facade under pressure.
           </Button>
           <Button className={`w-full py-3 bg-white text-black border hover:bg-gradient ${selectedOptions[2] ? active : inactive}`} onClick={() => handleClick(2)}>
-            Some answer
+          Stay confident, trust abilities.
           </Button>
           <Button className={`w-full py-3 bg-white text-black border border-gray-300 hover:bg-gradient ${selectedOptions[3] ? active : inactive}`} onClick={() => handleClick(3)}>
-            Some answer
+          Struggle with professionalism under stress.
           </Button>
         </div>
       </div>
