@@ -42,7 +42,7 @@ const Chats = () => {
     return () => {
       clearInterval(t);
     };
-  }, []);
+  }, [fetchMessages]);
 
   useEffect(() => {
     fetchMessages();
