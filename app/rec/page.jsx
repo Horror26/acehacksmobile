@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Component() {
-  const router=useRouter();
+  const router=useRouter;
   return (
     <div className="max-w-sm mx-auto">
       <div className="flex justify-between items-center px-4 py-2">
@@ -25,6 +25,7 @@ export default function Component() {
         </Button>
       </div>
       <div className="grid grid-cols-1 gap-4 px-4">
+      <h1 className="">Recommended for you</h1>
         <Card className="bg-[#FFD3B6] rounded-lg p-4">
           <div className="flex justify-between items-center">
             <h2 className="text-lg font-semibold">Flute Meditation</h2>
