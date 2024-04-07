@@ -49,7 +49,7 @@ const page = ({ searchParams }: any) => {
     <div>
       <div className="mx-[7vw] my-6 w-[86vw]">
         {dataObject.mapping.length &&
-          dataObject.mapping.map((msg, index): any => (
+          dataObject.mapping.map((msg: any, index: any) => (
             <div key={index}>
               {localStorage.getItem("username") ===
               dataObject.mapping[index] ? (
