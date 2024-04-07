@@ -7,15 +7,17 @@ import YourMessage from "@/components/shared/YourMessage";
 import OtherMessage from "@/components/shared/OtherMessage";
 import "@/components/shared/style.css";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
-const Chats = ({ searchParams }: any) => {
+const Chats = () => {
   const [dataObject, setDataObject] = useState<any>({ mapping: [], chats: [] });
-  const type = searchParams.type;
-  const username: string | null = localStorage.getItem("username");
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type");
+  const username: string = "riya";
   const [curr_msg, set_curr_msg] = useState("");
 
   const handleSubmit = async (e: any) => {
-    if (username === null) return;
+    if (type === null) return;
     dataObject.mapping.push(username);
     dataObject.chats.push(curr_msg);
     await updateDoc(doc(db, type, type), {
@@ -27,6 +29,7 @@ const Chats = ({ searchParams }: any) => {
 
   const fetchMessages = async () => {
     try {
+      if (type === null) return;
       const data: any = await getDoc(doc(db, type, type));
       setDataObject(await data.data());
     } catch (error) {
@@ -51,8 +54,7 @@ const Chats = ({ searchParams }: any) => {
         {dataObject.mapping.length &&
           dataObject.mapping.map((msg: any, index: any) => (
             <div key={index}>
-              {localStorage.getItem("username") ===
-              dataObject.mapping[index] ? (
+              {username === dataObject.mapping[index] ? (
                 <YourMessage data={dataObject.chats[index]} />
               ) : (
                 <OtherMessage data={dataObject.chats[index]} />
