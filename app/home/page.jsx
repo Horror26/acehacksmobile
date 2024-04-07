@@ -2,16 +2,19 @@
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function Component() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
-      <img
-          alt="heee"
-          className="hero-image-wrapper"
-          src="icons/logo.png"
-        />
+      
+        <Image
+              alt="heee"
+              className="hero-image-wrapper"
+              src="/icons/logo.png"
+              layout="responsive"
+            />
       <h1 className="text-2xl font-semibold my-4">MindfullMe</h1>
       <form className="w-full max-w-sm space-y-4">
         <Input placeholder="Email or Phone no." type="text" />
