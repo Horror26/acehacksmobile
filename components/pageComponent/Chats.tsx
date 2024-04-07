@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { getDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "@/config/firebase";
 import YourMessage from "@/components/shared/YourMessage";
@@ -27,15 +27,15 @@ const Chats = () => {
     set_curr_msg("");
   };
 
-  const fetchMessages = async () => {
+  const fetchMessages = useCallback(async () => {
     try {
       if (type === null) return;
-      const data: any = await getDoc(doc(db, type, type));
-      setDataObject(await data.data());
+      const data = await getDoc(doc(db, type, type));
+      setDataObject(data.data());
     } catch (error) {
       console.error(error);
     }
-  };
+  }, [type, setDataObject]);
 
   useEffect(() => {
     const t = setInterval(fetchMessages, 3000);
@@ -46,7 +46,7 @@ const Chats = () => {
 
   useEffect(() => {
     fetchMessages();
-  }, []);
+  }, [fetchMessages]);
 
   return (
     <div>
