@@ -22,7 +22,7 @@ export default function Component() {
             return index === idx ? true : false;
         });
     }) 
-    setTimeout(() => router.push("./page3"), 3000) 
+    setTimeout(() => router.push("./page3"), 1000) 
     console.log(selectedOptions)
   }
   const active = " bg-gradient-to-r from-orange-400 to-orange-400 via-orange-200 via-opacity-35"

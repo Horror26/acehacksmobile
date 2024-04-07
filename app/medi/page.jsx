@@ -39,6 +39,8 @@ export default function Component() {
                 className="ml-1"
                 src="/icons/play.png"
                 layout="responsive"
+                width={25}
+                height={25}
               />
             </Button>
           </div>
@@ -61,6 +63,8 @@ export default function Component() {
                 className="ml-1"
                 src="/icons/play.png"
                 layout="responsive"
+                width={25}
+                height={25}
               />
             </Button>
 
@@ -69,6 +73,8 @@ export default function Component() {
               className="w-full mt-8"
               src="/icons/medi2.png"
               layout="responsive"
+              width={25}
+                height={25}
             />
           </Card>
           <Card className="bg-[#FFE8EC] rounded-lg p-4">
@@ -78,6 +84,8 @@ export default function Component() {
               <Image
                 alt="play"
                 className="ml-1"
+                width={25}
+                height={25}
                 src="/icons/play.png"
                 layout="responsive"
               />
@@ -87,6 +95,8 @@ export default function Component() {
               alt="Saxophone"
               className="w-full mt-2"
               src="/icons/medi3.png"
+              width={25}
+                height={25}
               layout="responsive"
             />
           </Card>
@@ -96,8 +106,8 @@ export default function Component() {
             <h2 className="text-lg font-semibold">Tabla</h2>
             <Button className="bg-white text-black rounded-full text-xs flex items-center mt-2">
               Play Now
-              <Image alt="play" className="mt-1" src="/icons/play.png" />
             </Button>
+              <Image alt="play" className="mt-1 p-2" src="/icons/play.png" height={25} width={20} />
 
             <Image
               alt="Tabla"
@@ -119,6 +129,8 @@ export default function Component() {
               <Image
                 alt="play"
                 className="ml-1"
+                width={25}
+                height={25}
                 src="/icons/play.png"
                 layout="responsive"
               />

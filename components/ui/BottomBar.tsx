@@ -21,7 +21,7 @@ const BottomBar = () => {
       className="w-[100vw] justify-between px-8 h-[10vh] items-center fixed bottom-0 z-50 bg-white border border-[##27282D
     ] flex rounded-2xl"
     >
-      <Link href="/" className="flex items-center flex-col">
+      <Link href="https://acehacks-larz.vercel.app/" className="flex items-center flex-col">
         <Image
           height="25"
           width="25"
@@ -39,7 +39,7 @@ const BottomBar = () => {
         />
         <div className="font-extralight text-xs">Chat</div>
       </Link>
-      <Link className="flex items-center flex-col" href="/profile">
+      <Link className="flex items-center flex-col" href="/medi">
         <Image
           height="25"
           width="25"
