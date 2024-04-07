@@ -21,7 +21,7 @@ export default function Component() {
         return index === idx ? true : false;
       });
     });
-    setTimeout(() => document.location="https://acehacks-larz.vercel.app/", 3000);
+    setTimeout(() => document.location="https://acehacks-larz.vercel.app/", 1000);
     console.log(selectedOptions);
   };
   const active =
