@@ -33,7 +33,7 @@ export default function Component() {
         <Button className="w-full bg-orange-500 text-white">Login</Button>
       </form>
       <div className="mt-4">
-        <span className="text-sm">Don't have an account?</span>
+        <span className="text-sm">Dont have an account?</span>
         <Link className="text-sm text-orange-500" href="#">
           {" "}
           SignUp
