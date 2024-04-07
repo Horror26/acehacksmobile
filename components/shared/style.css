@@ -1,0 +1,78 @@
+.chatbot-page-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: linear-gradient(transparent 70%, rgba(149, 212, 244, 0.662));
+}
+.reply {
+    height: 3rem;
+    display: flex;
+    padding: .5rem 1rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 7px;
+    gap: .5rem;
+    background-color: white;
+}
+
+.reply > input {
+    width: 100%;
+    font-size: 1rem;
+}
+.reply > input:focus {
+    outline: none;
+}
+.person-image {
+    width: 40%;
+}
+.person-image  > img {
+    width: 100%;
+    transform: translateX(150%);
+    animation: enter-person 2s ease-in-out  forwards  ;
+    transition: 500ms;
+}
+@keyframes enter-person {
+    to {
+        transform: translateX(0);
+    }
+    
+}
+.message-history-wrapper {
+    margin: auto;
+}
+.message-history-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 75vh;
+    height: 70vh;
+    overflow: hidden;
+}
+.messages {
+    width: 80%;
+    height: min(70vh, 100%);
+    overflow: auto;
+    padding: 1rem;
+}
+.other-message {
+    background-color: #fb9a3b;
+    margin-bottom: .7rem;
+    padding: .5rem;
+    margin-left: 2rem;
+    border-radius: 7px;
+    animation: enter-person 2s ease-in-out  forwards  ;
+}
+
+.my-message {
+    background-color: #fafafa;
+    border: 2px solid black;
+    margin-bottom: .7rem;
+    padding: .5rem;
+    margin-right: 2rem;
+    border-radius: 7px;
+    animation: enter-person 2s ease-in-out  forwards  ;
+}
